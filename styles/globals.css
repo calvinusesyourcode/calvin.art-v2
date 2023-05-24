@@ -19,14 +19,14 @@ body {
   color: var(--color-text);
 }
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand);
-  border-radius: 8px;
+  background: var(--color-bg);
 }
 
 .light-mode {
@@ -35,8 +35,6 @@ body {
   --color-link: #3b49df;
 }
 
-
-
 main {
   top: 0;
   margin-top: 8rem;
@@ -44,10 +42,9 @@ main {
 
 /* flex-boxes */
 
-.simple-flex {
+.f {
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
 }
 .simple-flex3 {
   display: flex;
@@ -64,8 +61,7 @@ main {
   gap: 1rem;
   align-items: center;
 }
-.down-flex {
-  display: flex;
+.f-col {
   flex-direction: column;
 }
 .f-center {
@@ -96,6 +92,10 @@ main {
   padding: 0;
   width: 10%;
   align-items: center;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .tag-select label {
@@ -133,9 +133,9 @@ p.link {
   
 }
 .home-page {
-  padding: 1rem calc(0.47 * 100vw - 170px) 3rem;
-  margin-top: 2rem;
+  margin: 3rem calc(0.47 * 100vw - 170px) 3rem;
 }
+
 
 .post-content {
   border: 1px solid var(--color-brand);
@@ -191,9 +191,7 @@ a {
   cursor: pointer;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 img {max-width: 100%;}
 
@@ -565,6 +563,9 @@ textarea {
 .no-wrap {
   flex-wrap: nowrap;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .no-pad {
   padding: 0;
 }
@@ -661,4 +662,31 @@ textarea {
 .home-card {
   width: 15rem;
   height: 6rem;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.show {
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+hr {
+  display: block;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-style: inset;
+  border-width: 1px;
 }

@@ -17,7 +17,7 @@ export default function Home() {
             <Image height="100" width="100" src="https://media.licdn.com/dms/image/C4E03AQGIYK3XldkWTg/profile-displayphoto-shrink_800_800/0/1610592340250?e=2147483647&v=beta&t=MTpZSvvvg4ae3vJnelBgNFq1sFZessIJq7e_zndbn-g"/>
             <div className='down-flex'>
               <h1 className='no-mrg'>calvin.art</h1>
-              <p>Hi, I'm Calvin. I'm a web developer and artist currently exploring the leverage of intelligent systems.</p>
+              <p>Hi, I&apos;m Calvin. I&apos;m a web developer and artist currently exploring the leverage of intelligent systems.</p>
             </div>
           </div>
           <div className='simple-flex f-start2 gap wrap'>

@@ -12,9 +12,7 @@ export default function EnterPage({}) {
   // 2. user signed in, but missing username <UsernameForm />
   // 3. user signed in, has username <SignOutButton />
   // <button onClick={() => console.log(auth.currentUser.email)} />
-  console.log("1",user, username)
   const { user, username } = useContext(UserContext);
-  console.log("2",user, username)
   return (
     <>
     <p>hi</p>

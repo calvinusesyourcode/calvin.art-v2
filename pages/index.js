@@ -3,8 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ClientSVG, SocialIcon, TwitterIcon } from '@/components/SVGs'
 import { ProjectOverview } from '@/components/PageComponents'
+import { UserContext } from '@/lib/context'
+import { useContext } from 'react'
 
 export default function Home() {
+  const { user, username } = useContext(UserContext);
   return (
     <>
       <Head>
@@ -15,26 +18,9 @@ export default function Home() {
       </Head>
       <main className='no-mrg'>
         <div className='home-page f f-col gap'>
-          <div className='f f-start2 gap wrap'>
-            <Link href={'/'} className='clickable'>
-              <Image height="100" width="100" alt="pic of me" src="https://media.licdn.com/dms/image/C4E03AQGIYK3XldkWTg/profile-displayphoto-shrink_800_800/0/1610592340250?e=2147483647&v=beta&t=MTpZSvvvg4ae3vJnelBgNFq1sFZessIJq7e_zndbn-g"/>
-            </Link>
-            <div className='f f-col'>
-              <Link href={'/'} className='clickable'><h1 className='no-mrg'>calvin.art</h1></Link>
-              <p>Hi, I&apos;m Calvin. I&apos;m a full-stack web developer and artist currently exploring the leverage of intelligent systems.</p>
-            </div>
-          </div>
-          <div className='f f-start2 gap wrap'>
-            <SocialIcon app="twitter"/>
-            <SocialIcon app="email" />
-            <SocialIcon app="github" />
-            <i>html, css, javascript, python </i>
-            </div>
-            <hr />
-            <div className='f f-col gap'>
-            <ProjectOverview project="peden" color="#ffd600"/>
-            <ProjectOverview project="glyptodon" color="url(#sunset_gradient)" />
-            </div>
+          <Link href={'/portfolio'} className='clickable'>
+            <h1 className='link'>portfolio</h1>
+          </Link>
 
 
 

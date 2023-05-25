@@ -112,18 +112,15 @@ p.t-left {
 }
 
 .pfp {
-  height: 50px;
+  aspect-ratio: 1/1;
+  height: auto;
+  width: auto;
+}
+.pfp-circle {
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 1px solid var(--color-brand);
 }
-.pfp-n {
-  height: 50px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 1px solid var(--color-text);
-}
-p.link {
+.link {
   text-decoration: underline;
   color: var(--color-link)
 }
@@ -281,7 +278,12 @@ path.green {
 
 /* Buttons */
 
-.btn, button {
+.btn-html {
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.btn {
   background-color: var(--color-gray);
   border: none;
   color: var(--color-text);
@@ -487,26 +489,46 @@ input[type="file"] {
   display: none;
 }
 
+.below {
+  position: relative;
+}
+
+.above {
+  position: absolute;
+  bottom: 0;
+  left: 33%;
+}
+
 .input[type="slider"]::-webkit-slider-thumb {
   width: 10px;
   -webkit-appearance: none;
   height: 10px;
   cursor: ew-resize;
   background: #434343;
+  font-family: inherit;
   box-shadow: -80px 0 0 80px #43e5f7;
 }
 
-input {
+input[type="text"] {
   width: 100%;
   border-radius: 8px;
   padding: .5rem;
+  background-color: inherit;
+  color: var(--color-text);
+  border: none;
+  overflow: visible;
 }
-textarea {
+textarea[type="text"] {
+  font-family: inherit;
   width: 100%;
-  height: 6rem;
   border-radius: 8px;
   padding: .5rem;
+  background-color: inherit;
+  color: var(--color-text);
+  border: none;
+  overflow-wrap: normal;
 }
+
 
 .upload-snippet {
   width: 75%;
@@ -689,4 +711,11 @@ hr {
   margin-bottom: 0.5em;
   border-style: inset;
   border-width: 1px;
+}
+
+.shrink {
+  flex-shrink: 100;
+}
+.grow {
+  flex-grow: 100;
 }

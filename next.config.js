@@ -12,6 +12,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'github.githubassets.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+      },
     ]
-  }
+    }
 }

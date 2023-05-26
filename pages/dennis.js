@@ -25,21 +25,42 @@ export default function DennisPage(props) {
 
                 <h1>Why me?</h1>
                 <span>cost-effective</span>
-                <li className="tab1">I am still learning and thus am willing to work for less than I&apos;m worth</li>
+                <li className="tab1">I am still learning and thus am willing to work for less than I&apos;m worth, half as much as you paid me before</li>
+                <li className="tab2">$100/hr =&gt; $50/hr</li>
                 <li className="tab1">the average BASE salary of a CTO WITHOUT the massive leverage of AI is CAD$144,000 <Link className="link" href="https://www.glassdoor.ca/Salaries/cto-salary-SRCH_KO0,3.htm">(source)</Link> </li>
                 <li className="tab2">depending on the programmer and the AI, that CTO with AI is then worth 2-10x more........</li>
                 <li className="tab1">I am not asking for anywhere near that amount and yet will deliver that level of value</li>
                 <li className="tab1">and my ability to deliver value will scale with the progress of AI</li>
                 <li className="tab2">exponentially</li>
                 <span>vision</span>
-                <li className="tab1">you once called me a business coach</li>
+                <li className="tab1">you once called me a business coach, that is my aim</li>
                 <li className="tab1">my vision for your company is multi-factorial and will evolve with you</li>
 
                 <h1>Road map</h1>
-                <span className="tab1 li">1: Neil Smith Construction website</span>
-                <li className="tab2"> simple project documentation system where employees can upload photos, add project notes, </li>
-                <span className="tab1 li">2: Google Ads </span>
-                <span className="tab1 li"> </span>
+                <span>month 1 (timing is just an estimate, may be quicker)</span>
+                <span className="tab1 li">1: NSC website makeover</span>
+                <span className="tab2 li">• simplified project documentation system where employees can upload project photos and add project notes</span>
+                <span className="tab2 li">• check out the simple version I created for <Link href="https://pedenindustries.ca" className="link">Peden</Link></span>
+
+                <span>~month 2</span>
+                <span className="tab2 li">b: Google ads -- NSC Special Projects landing page</span>
+                <span className="tab2 li">c: Google ads A/B testing -- optimize for conversion rate</span>
+                <span>~month 3</span>
+                <span className="tab1 li">2: automatic blog post system for both companies</span>
+                <span className="tab1 li">• increase organic website traffic (&quot;SEO&quot;)</span>
+                <span>~month 4 onward</span>
+                <span className="tab1 li">3: Data analysis</span>
+                <span className="tab1 li">4: Automatic social media content generation, video and image format, for both companies</span>
+                <span className="tab1 li">• facebook, instagram, tiktok, youtube, twitter -- all</span>
+                <span className="tab1 li">5: automatic email responses based on your past email responses</span>
+                <span className="tab1 li">6: facebook cold outreach ads directed at wealthy farmers looking to expand their usable land</span>
+                <span className="tab1 li">7: personal twitter branding</span>
+                <h1>Salary request</h1>
+                <span>$3200/mo</span>
+                <span className="tab1 li">• 16 hours of tech work / coding per week ($50/hr)</span>
+                <span className="tab2 li">• with documentation</span>
+                <span className="tab1 li">+ 1 free testimonial video per month</span>
+                <span className="tab2 li">• only $500 per additional video</span>
                 
             </div>
 

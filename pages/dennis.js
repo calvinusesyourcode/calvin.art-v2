@@ -1,8 +1,10 @@
+import Metatags from "@/components/Metatags"
 import Image from "next/image"
 import Link from "next/link"
 export default function DennisPage(props) {
     return (
         <main className="no-mrg">
+            <Metatags title="calvin's CTO application" description="3 minute read" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
             <div className="home-page f f-col gap-tiny blue-bg">
                 <div className="f gap f-start2">
                         

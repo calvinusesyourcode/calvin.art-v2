@@ -69,6 +69,7 @@ export default function Portfolio(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='no-mrg'>
+      <Metatags title="calvin.art" description="calvin's portfolio" image={pfp} />
         <div className='home-page f f-col gap'>
           <div className='f f-start2 gap f-start'>
             {!editing && (

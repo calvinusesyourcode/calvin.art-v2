@@ -8,6 +8,7 @@ import { useContext, useState } from 'react'
 import { firestore, postToJSON, fromMillis, serverTimestamp, storage } from '@/lib/firebase';
 import AuthCheck from '@/components/AuthCheck'
 import path from 'path'
+import Metatags from '@/components/Metatags'
 
 export async function getServerSideProps(context) {
   const postsQuery = firestore

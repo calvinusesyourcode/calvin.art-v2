@@ -22,7 +22,6 @@ export default function DennisPage(props) {
                 <li className="tab2">bottom line: non-adopters get left behind</li>
                 <li className="tab2">illustration: factory farm vs man with bare hands</li>
                 <li className="tab1">by optimizing your business for AI integration now, your output will scale with the development of technology</li>
-                <li className="tab2">exponentially</li>
 
                 <h1>Why me?</h1>
                 <span>cost-effective</span>
@@ -31,14 +30,14 @@ export default function DennisPage(props) {
                 <li className="tab2">depending on the programmer and the AI, that CTO with AI is then worth 2-10x more........</li>
                 <li className="tab1">I am not asking for anywhere near that amount and yet will deliver that level of value</li>
                 <li className="tab1">and my ability to deliver value will scale with the progress of AI</li>
-                <li className="tab2">again: exponentially</li>
+                <li className="tab2">exponentially</li>
                 <span>vision</span>
                 <li className="tab1">you once called me a business coach</li>
                 <li className="tab1">my vision for your company is multi-factorial and will evolve with you</li>
 
                 <h1>Road map</h1>
                 <span className="tab1 li">1: Neil Smith Construction website</span>
-                <li className="tab2"> simple project documentation system where employees can upload photos </li>
+                <li className="tab2"> simple project documentation system where employees can upload photos, add project notes, </li>
                 <span className="tab1 li">2: Google Ads </span>
                 <span className="tab1 li"> </span>
                 

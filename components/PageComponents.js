@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export function ProjectOverview(props) {
     var project = props.project
+    var styles = props.styles
     var infos = {
         'peden':{ "p":[
             'scope: web dev, advertising',
@@ -31,7 +32,7 @@ export function ProjectOverview(props) {
     var show = false
     return (
         <>
-        <div id={project+"_div"} className="w100">
+        <div id={project+"_div"} className={"mrg-left div2 bottom"+styles.bottom}>
         <div id={project+"_button"} width="440" className="clickable f f-start2 f-center gap w100" onClick={() => {
             document.getElementById(project+"_dropdown").classList.toggle("show"); show = true
             setColor(color == "white" ? props.color : "white")

@@ -1,23 +1,45 @@
 
 :root {
-  font-size: calc(0.0022 * 100vw + 12px);
-}
-html,
-body {
-  --color-bg: #18111b;
-  --color-text: #eef0f1;
+  /*font-size: calc(0.0022 * 100vw + 12px);*/
+  font-size: 14px;
+  --color-bg: #1e1f22;
+  --div-primary: #1e1f22;
+  --div-secondary: #2b2d31;
+  --div-tertiary: #3b3e43;
+  --text-primary: #ffffff;
+  --text-secondary: #b1b1b1;
   --color-blue: #3b49df;
   --color-red: #df3b3b;
   --color-green: #3bdf72;
   --color-gray: #000000;
   --color-brand:#ff00c8;
   --color-link: #3bccdf;
-  padding: 0;
-  margin: 0;
-  font-family: 'Noto Sans', sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
+
+html, body {
+  background-color: var(--div-primary);
+  color: var(--text-primary);
+}
+
+.div1 {
+  background-color: var(--div-primary);
+}
+
+.div2 {
+  background-color: var(--div-secondary);
+}
+
+.div3 {
+  background-color: var(--div-tertiary);
+}
+
+
+
+.text2 {
+  color: var(--text-secondary);
+}
+
 ::-webkit-scrollbar {
   display: none;
   width: 4px;
@@ -38,7 +60,7 @@ body {
 
 main {
   top: 0;
-  margin-top: 8rem;
+  margin-top: 1rem;
 }
 
 /* flex-boxes */
@@ -56,6 +78,17 @@ main {
 }
 .simple-flex3 div {
   flex: 1 1 160px;
+}
+.align-bottom {
+  align-self: flex-end;
+}
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mrg-left {
+  margin-left: 4rem;
 }
 .simple-flex2 {
   display: flex;
@@ -112,10 +145,12 @@ p.t-left {
   text-align: start;
 }
 
+.h100 {
+  height: 100%;
+}
 .pfp {
-  aspect-ratio: 1/1;
-  height: auto;
-  width: auto;
+  object-fit: cover;
+  height: 100%;
 }
 .pfp-circle {
   aspect-ratio: 1/1;
@@ -131,7 +166,11 @@ p.t-left {
   
 }
 .home-page {
-  margin: 3rem calc(0.47 * 100vw - 170px) 3rem;
+  margin: 1rem calc(0.4 * 100vw - 146px) 2rem;
+}
+
+.rounded {
+  border-radius: 8px;
 }
 
 
@@ -496,8 +535,8 @@ input[type="file"] {
 
 .above {
   position: absolute;
-  bottom: 0;
-  left: 33%;
+  bottom: 75%;
+  left: 30% ;
 }
 
 .input[type="slider"]::-webkit-slider-thumb {
@@ -720,6 +759,9 @@ hr {
 .grow {
   flex-grow: 100;
 }
+.stretch {
+  align-self: stretch;
+}
 
 .tab1 {
   margin-left: 1rem;
@@ -740,3 +782,8 @@ li {
   margin-block-end: .2rem;
 }
 
+.darken {
+  color: black;
+  mix-blend-mode: darken;
+  font-size:10rem;
+}

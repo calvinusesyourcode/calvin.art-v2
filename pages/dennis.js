@@ -30,7 +30,7 @@ export default function DennisPage(props) {
     return (
         <>
         <Head>
-            <Metatags title="My Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
+            <Metatags title="My Application" description="Application for Dennis" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
         </Head>
         <main className="no-mrg">
             <div className="home-page f f-col gap-tiny div2 pad-sides rounded">

@@ -37,6 +37,7 @@ export default function JapaneseMatrix() {
     
         context.fillStyle = '#3bccdf';
         context.font = fontSize + 'px monospace';
+        //context.fillText(`${canvas.width} by ${canvas.height}`, canvas.width/3, canvas.height/2);
 
         const combinedFunction = (x, canvas) => {
           x /= 220
@@ -63,19 +64,18 @@ export default function JapaneseMatrix() {
             const x = waves[i]+i+10+100;
             //const y = combinedFunction(x, canvas) + (i)*fontSize - canvas.height/2;
             const y = combinedFunction(x, canvas) + (i)*fontSize/1.2 - canvas.height/4; 
-            const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+            const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length)); 
             context.fillText(text, x, y/1);
       
             if(x > canvas.width && (Math.random() > 0.999 || waves2[i])){
               waves[i] = -canvas.width/3;
               waves2[i] = true;
             }
-            waves[i] += 5;
+            waves[i] += 10;
           }
         }
       };
       
-
       setInterval(draw, 2);
     }, [])
     
@@ -95,8 +95,6 @@ export default function JapaneseMatrix() {
       <main className='no-mrg'>
         <Metatags title="calvin's virtual portal" description="calvin ducharme's website" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp.png?alt=media&token=3ab0bc98-b607-400b-bcbe-2b4fb633734d" />
         <canvas className='below' id="matrix-canvas"></canvas>
-        <Link className='above link darken' href="/portfolio"><h1>portfolio</h1></Link>
-
 
       </main>
     </>

@@ -301,7 +301,6 @@ code {
 
 .logo-text {
   font-size: 82px;
-  fill: var(--color-text);
   height: 100%;
   width: 100%;
 }
@@ -319,6 +318,9 @@ svg.yellow {
 .yellow {
   fill: #ffd600;
   
+}
+.center {
+  justify-content: center;
 }
 path.green {
   fill: #55cf3d;

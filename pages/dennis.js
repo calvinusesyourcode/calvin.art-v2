@@ -32,23 +32,16 @@ export default function DennisPage(props) {
     \n\n * Easily connect data like project info to social media posts and blog posts automatically
     \n\n * Automate repetitive tasks that a human would have to do\
     \n\n * Sidestepping providers like wordpress enables us to leverage coding abilities of artificial intelligence (AI)\
-    \n\n And:`
-    
-    const text111 = `First, the big idea:  \n \n   By leveraging code, one\
-    programmer can do the work of many humans, and by leveraging artificial intelligence (AI) one programmer can do the work of many programmers.\
-      \n \n   The leverage of one human's productivity is now astronomical.  \n \n   I will be your most productive employee ever.  \n \n   And the \
-      infrastructure I develop will not only directly serve NSC & Aslan but can be sold to other companies (outside your niche) and you can make a percentage\
-       of my revenue.  \n \n   Current scope:  \n \n   NSC website => web app  \n \n * NSC special projects  \n \n * Employees can upload photos directly to \
-       projects based on location/project-assigned (think company cam, but you own the software outright and integrations with AI and whatever else can dynamically\
-        be added)  \n \n Deep website analytics + analysis  \n \n * Google ads for NSC special projects  \n \n  Automated high-quality social media posting + website\
-        blog posts  \n \n * For Peden we’ve learned that a lot of the intended customers are on Facebook, and now with automation we can create a system that takes our\
-        projects on the website and creates Facebook posts automatically  \n \n  Automate repetitive secretary tasks  \n \n * Simple and self-explanatory, the tasks can\
-        be pretty complex as long as there is precedent to infer from  \n \n  Automate email  \n \n * Save you time from reading emails that can easily be replied to/ignored\
-        based on your previous email behavior  \n \n Automate phone calls (in future) \n \n * This would require you to start recording your phone calls so we have precedent\
-        for how you handle different situations, but basically in the future you only need to take the important phone calls  \n \n Analyze internal documents and propose\
-        cost savings  \n \n * self explanatory and easy  \n \n In 30 days the NSC website can be up and running and soon after the Facebook/blog posting functionality can be\
-        running  \n \n   The revenue share could be big because you are well connected. After the systems are built it will be easy to onboard other\
-        companies.  \n \n   I’m excited for this next chapter of our working together, and to help bring NSC & Aslan into a new age of automation, efficiency, and optimization.  \n \n —Calvin`
+    \n\n * No subscription: You own the code for your website.\
+    \n\n * Built within 30 days.\
+    \n\n And:\
+    \n\n * For any additional clients you refer to me, we can discuss profit share. Something like 10%. Negotiable.\
+    \n\n * I have a lot of ideas for NSC and Aslan. This is just the beginning.\
+    `
+    const text5 = `Vision:
+    \n\n * Align NSC and Aslan with the future of technology
+    \n\n Bonus:
+    \n\n * I still want to do those testimonial videos. Perhaps the $1000 price tag scared you off. What about $500 for the same amount of work/quality?`
     return (
         <>
         <Head>
@@ -56,6 +49,27 @@ export default function DennisPage(props) {
         </Head>
         <main className="no-mrg">
             <div className="blog-page f f-col gap">
+            
+
+
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text1}</ReactMarkdown>
+            </div>
+                <img src="/contributions.png" alt="example" className="rounded img" />
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text2}</ReactMarkdown>
+                <Link className="link" href="https://www.pedenindustries.ca/"><p>pedenindustries.ca</p></Link>
+                <ReactMarkdown>{text3}</ReactMarkdown>
+            </div>
+                <img src="/example_1.webp" alt="example" className="rounded img" />
+                <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text4}</ReactMarkdown>
+            </div>
+            <img src="/example_2.webp" alt="example" className="rounded img" />
+            <img src="/example_3.webp" alt="example" className="rounded img" />
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text5}</ReactMarkdown>
+            </div>
             <div className="f gap div2 rounded quote-cover-div below">
                 <img id="quotes-image" src="/Hubble_ultra_deep_field.jpg" className="fade fit-width3"></img>
                 <div id="quotes" className="above width-full pad-sides">
@@ -74,22 +88,6 @@ Computer Scientist, Mathematician, <br />Theoretical Physicist, Founder</p>
                     </div>
                 </div>
             </div>
-
-
-            <div className="f f-col div2 pad-sides rounded">
-                <ReactMarkdown>{text1}</ReactMarkdown>
-            </div>
-                <img src="/contributions.png" alt="example" className="rounded img" />
-            <div className="f f-col div2 pad-sides rounded">
-                <ReactMarkdown>{text2}</ReactMarkdown>
-                <Link className="link" href="https://www.pedenindustries.ca/"><p>pedenindustries.ca</p></Link>
-                <ReactMarkdown>{text3}</ReactMarkdown>
-            </div>
-                <img src="/example_1.webp" alt="example" className="rounded img" />
-                <div className="f f-col div2 pad-sides rounded">
-                <ReactMarkdown>{text4}</ReactMarkdown>
-            </div>
-            <img src="/example_2.webp" alt="example" className="rounded img" />
             </div>
             <div className="f f-col f-center gap">
                 </div>

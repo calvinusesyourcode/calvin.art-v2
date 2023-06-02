@@ -60,12 +60,12 @@ export default function DennisPage(props) {
                 <img id="quotes-image" src="/Hubble_ultra_deep_field.jpg" className="fade fit-width3"></img>
                 <div id="quotes" className="above width-full pad-sides">
                     <div className="pad">
-                        <p className="t-center">&quot;Over 20/30 year time frame I think things will be transformed beyond belief. Probably won't recognize society in 30 years.&quot;</p>
+                        <p className="t-center">&quot;Over 20/30 year time frame I think things will be transformed beyond belief. Probably won&apos;t recognize society in 30 years.&quot;</p>
                         <div className="f gap f-center">
                             <img src="/elon.png" width="50" height="50" alt="elon" className="pfp-circle" />
                             <p>Elon Musk <br/>Rocket Engineer, Software <br />  Engineer, Inventor, Founder </p>
                         </div>
-                        <p className="t-center">&quot;Will you always be able to invent another thing? The answer is yes, there's an infinite tower of possible inventions.&quot;</p>
+                        <p className="t-center">&quot;Will you always be able to invent another thing? The answer is yes, there&apos;s an infinite tower of possible inventions.&quot;</p>
                         <div className="f gap f-center">
                             <img src="/wolfram.png" width="50" height="50" alt="elon" className="pfp-circle" />
                             <p>Stephen Wolfram <br></br>

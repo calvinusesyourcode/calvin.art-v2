@@ -21,8 +21,20 @@ export default function DennisPage(props) {
     document.getElementById("quotes-image").style.height = quotes_height + "px"
     }, [])
 
-    const text = `Dennis,  \n \n   I want to make an offer you cannot refuse. \n \n I am willing to negotiate price but the value I shall\
-    provide shall far outweigh any dollar amount you pay me.  \n \n $4000/mo  \n \n   First, the big idea:  \n \n   By leveraging code, one\
+    const text1 = `Dennis,  \n \n   I want to make an offer you cannot refuse. \n \n  I venture
+    to provide extremely robust return on investment, but I am negotiable on price because I really want to work for you.`
+    const text2 = `Since we last spoke I have dived deep into programming—building programs, studying algorithms and math concepts.\
+    \n\n And this past month I have learned true web development (without no-code tools like wordpress or wix) by building Neil a new website.`
+    const text3 = `The first thing I want to implement for NSC is the successor to that website.`
+    const text4 = `Because: \n\n * Dead-simple project documentation system where employees or supervisors on-the-ground can upload pictures, notes, and other information to the project\
+    \n\n * That system could also have functionality where employees can upload internal data for supervisors to see (punch in, punch out, notes, etc)\
+    \n\n * Access to raw code enables deep website analytics for when I do experiments for Special Projects advertising
+    \n\n * Easily connect data like project info to social media posts and blog posts automatically
+    \n\n * Automate repetitive tasks that a human would have to do\
+    \n\n * Sidestepping providers like wordpress enables us to leverage coding abilities of artificial intelligence (AI)\
+    \n\n And:`
+    
+    const text111 = `First, the big idea:  \n \n   By leveraging code, one\
     programmer can do the work of many humans, and by leveraging artificial intelligence (AI) one programmer can do the work of many programmers.\
       \n \n   The leverage of one human's productivity is now astronomical.  \n \n   I will be your most productive employee ever.  \n \n   And the \
       infrastructure I develop will not only directly serve NSC & Aslan but can be sold to other companies (outside your niche) and you can make a percentage\
@@ -53,7 +65,7 @@ export default function DennisPage(props) {
                             <img src="/elon.png" width="50" height="50" alt="elon" className="pfp-circle" />
                             <p>Elon Musk <br/>Rocket Engineer, Software <br />  Engineer, Inventor, Founder </p>
                         </div>
-                        <p className="t-center">&quot;Something about computation.&quot;</p>
+                        <p className="t-center">&quot;Will you always be able to invent another thing? The answer is yes, there's an infinite tower of possible inventions.&quot;</p>
                         <div className="f gap f-center">
                             <img src="/wolfram.png" width="50" height="50" alt="elon" className="pfp-circle" />
                             <p>Stephen Wolfram <br></br>
@@ -64,11 +76,20 @@ Computer Scientist, Mathematician, <br />Theoretical Physicist, Founder</p>
             </div>
 
 
-            <div className="f f-col gap-tiny div2 pad-sides rounded">
-                <ReactMarkdown>{text}</ReactMarkdown>
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text1}</ReactMarkdown>
+            </div>
+                <img src="/contributions.png" alt="example" className="rounded img" />
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text2}</ReactMarkdown>
+                <Link className="link" href="https://www.pedenindustries.ca/"><p>pedenindustries.ca</p></Link>
+                <ReactMarkdown>{text3}</ReactMarkdown>
             </div>
                 <img src="/example_1.webp" alt="example" className="rounded img" />
-                <img src="/example_2.webp" alt="example" className="rounded img" />
+                <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text4}</ReactMarkdown>
+            </div>
+            <img src="/example_2.webp" alt="example" className="rounded img" />
             </div>
             <div className="f f-col f-center gap">
                 </div>

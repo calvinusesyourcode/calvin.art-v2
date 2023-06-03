@@ -44,9 +44,7 @@ export default function DennisPage(props) {
     \n\n * I still want to do those testimonial videos. Perhaps the $1000 price tag scared you off. What about $500 for the same amount of work/quality?`
     return (
         <>
-        <Head>
-            <Metatags title="My Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
-        </Head>
+        <Metatags title="My Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
         <main className="no-mrg">
             <div className="blog-page f f-col gap">
             

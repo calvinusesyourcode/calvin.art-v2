@@ -74,9 +74,6 @@ export default function Portfolio(props) {
   return (
     <>
       <Head>
-        <title>calvin&apos;s portfolio</title>
-        <meta name="description" content="calvin.art portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='no-mrg'>
@@ -100,7 +97,7 @@ export default function Portfolio(props) {
             <SocialIcon app="twitter"/>
             <SocialIcon app="email" />
             <SocialIcon app="github" />
-            <p className='align-bottom code no-mrg'>html, css, javascript, python </p>
+            <p className='align-bottom code no-mrg'>python, javascript, html, css </p>
             </div>
             <AuthCheck fallback={<></>}>
               <div className='f f-start2 gap'>

@@ -21,7 +21,8 @@ export default function DennisPage(props) {
     document.getElementById("quotes-image").style.height = quotes_height + "px"
     }, [])
 
-    const text1 = `Dennis,  \n \n   I want to make an offer you cannot refuse. \n \n  I venture
+    const text1 = `Hello Dennis!  \n \n   I hope all is well and I trust you are working hard as always. \n\n Let's go straight to it: \n\n I want to be your CTO => Chief Technology Officer. \n \n The vision is to dawn a new era of NSC and Aslan where technology
+    is integrated to automate and optimize where possible, allowing the humans in the loop to focus on what's really important. \n \n I venture
     to provide extremely robust return on investment, but I am negotiable on price because I really want to work for you.`
     const text2 = `Since we last spoke I have dived deep into programming—building programs, studying algorithms and math concepts.\
     \n\n And this past month I have learned true web development (without no-code tools like wordpress or wix) by building Neil a new website.`
@@ -30,21 +31,21 @@ export default function DennisPage(props) {
     \n\n * That system could also have functionality where employees can upload internal data for supervisors to see (punch in, punch out, notes, etc)\
     \n\n * Access to raw code enables deep website analytics for when I do experiments for Special Projects advertising
     \n\n * Easily connect data like project info to social media posts and blog posts automatically
-    \n\n * Automate repetitive tasks that a human would have to do\
-    \n\n * Sidestepping providers like wordpress enables us to leverage coding abilities of artificial intelligence (AI)\
-    \n\n * No subscription: You own the code for your website.\
-    \n\n * Built within 30 days.\
+    \n\n * Automate repetitive tasks that a human would have to do
+    \n\n * Sidestepping providers like wordpress enables us to leverage coding abilities of artificial intelligence (AI)
+    \n\n * No subscription: You own the code for your website.
+    \n\n * Built within 30 days.
     \n\n And:\
-    \n\n * For any additional clients you refer to me, we can discuss profit share. Something like 10%. Negotiable.\
-    \n\n * I have a lot of ideas for NSC and Aslan. This is just the beginning.\
+    \n\n * For any additional clients you refer to me, we can discuss profit share. Something like 10%. Negotiable.
+    \n\n * I will construct the website in such a manner that porting Aslan's website over, if you like, will be even easier. Retaining all the web design on there that you love.
     `
-    const text5 = `Vision:
-    \n\n * Align NSC and Aslan with the future of technology
-    \n\n Bonus:
-    \n\n * I still want to do those testimonial videos. Perhaps the $1000 price tag scared you off. What about $500 for the same amount of work/quality?`
+    const text5 = `Bonus:
+    \n\n * I still want to do those testimonial videos. Perhaps the $1000 price tag scared you off. What about $600 for the same amount of work/quality?
+    \n\n * I am in touch with some videography students and so we would love to tackle the medical sector video for NSC as well.`
+    const text6 = `I am ready to start immediately and am very excited to work together.`
     return (
         <>
-        <Metatags title="My Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
+        <Metatags title="CTO Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
         <main className="no-mrg">
             <div className="blog-page f f-col gap">
             
@@ -67,6 +68,9 @@ export default function DennisPage(props) {
             <img src="/example_3.webp" alt="example" className="rounded img" />
             <div className="f f-col div2 pad-sides rounded">
                 <ReactMarkdown>{text5}</ReactMarkdown>
+            </div>
+            <div className="f f-col div2 pad-sides rounded">
+                <ReactMarkdown>{text6}</ReactMarkdown>
             </div>
             <div className="f gap div2 rounded quote-cover-div below">
                 <img id="quotes-image" src="/Hubble_ultra_deep_field.jpg" className="fade fit-width3"></img>

@@ -47,34 +47,34 @@ export default function DennisPage(props) {
         <>
         <Metatags title="CTO Application" description="" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fcto.png?alt=media&token=59aaa317-89d8-4170-8782-4e827992df18" />
         <main className="no-mrg">
-            <div className="blog-page f f-col gap">
+            <div className="blog-page f col gap">
             
 
 
-            <div className="f f-col div2 pad-sides rounded">
+            <div className="f col div pad-sides rounded">
                 <ReactMarkdown>{text1}</ReactMarkdown>
             </div>
                 <img src="/contributions.png" alt="example" className="rounded img" />
-            <div className="f f-col div2 pad-sides rounded">
+            <div className="f col div pad-sides rounded">
                 <ReactMarkdown>{text2}</ReactMarkdown>
                 <Link className="link" href="https://www.pedenindustries.ca/"><p>pedenindustries.ca</p></Link>
                 <ReactMarkdown>{text3}</ReactMarkdown>
             </div>
                 <img src="/example_1.webp" alt="example" className="rounded img" />
-                <div className="f f-col div2 pad-sides rounded">
+                <div className="f col div pad-sides rounded">
                 <ReactMarkdown>{text4}</ReactMarkdown>
             </div>
             <img src="/example_2.webp" alt="example" className="rounded img" />
             <img src="/example_3.webp" alt="example" className="rounded img" />
-            <div className="f f-col div2 pad-sides rounded">
+            <div className="f col div pad-sides rounded">
                 <ReactMarkdown>{text5}</ReactMarkdown>
             </div>
-            <div className="f f-col div2 pad-sides rounded">
+            <div className="f col div pad-sides rounded">
                 <ReactMarkdown>{text6}</ReactMarkdown>
             </div>
-            <div className="f gap div2 rounded quote-cover-div below">
+            <div className="f gap div rounded quote-cover-div below">
                 <img id="quotes-image" src="/Hubble_ultra_deep_field.jpg" className="fade fit-width3"></img>
-                <div id="quotes" className="above width-full pad-sides">
+                <div id="quotes" className="right-on-top width-full pad-sides">
                     <div className="pad">
                         <p className="t-center">&quot;Over 20/30 year time frame I think things will be transformed beyond belief. Probably won&apos;t recognize society in 30 years.&quot;</p>
                         <div className="f gap f-center">
@@ -91,7 +91,7 @@ Computer Scientist, Mathematician, <br />Theoretical Physicist, Founder</p>
                 </div>
             </div>
             </div>
-            <div className="f f-col f-center gap">
+            <div className="f col f-center gap">
                 </div>
         </main>
         </>

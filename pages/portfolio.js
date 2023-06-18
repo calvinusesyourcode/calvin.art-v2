@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ClientSVG, SocialIcon, TwitterIcon } from '@/components/SVGs'
 import { ProjectOverview } from '@/components/PageComponents'
+import { SvgIcon } from '@/components/GlobalComponents'
 import { UserContext } from '@/lib/context'
 import { useContext, useState, useRef, useEffect } from 'react'
 import { firestore, postToJSON, fromMillis, serverTimestamp, storage } from '@/lib/firebase';
@@ -71,6 +72,49 @@ export default function Portfolio(props) {
     }, { merge: true }).catch((error) => {setConsoleLog(consoleLog+"\r\n"+error)})
     console.log("submitted changes")
   }
+
+  useEffect(() => {
+    const canvas = document.getElementById('matrix-canvas');
+    const context = canvas.getContext('2d');
+  
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  
+    // const alphabet = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0987654321!@#$%^&*()';
+    const alphabet = '01'
+  
+    let fontSize = (Math.floor(Math.random() * 16)) + 8;
+    const columns = canvas.width/fontSize;
+  
+    const rainDrops = Array.from({ length: columns }).fill(canvas.height);
+  
+    for( let x = 0; x < columns; x++ ) {
+        rainDrops[x] = 1;
+    }
+  
+    const draw = () => {
+      context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+  
+      context.fillStyle = '#0F0';
+      context.font = fontSize + 'px monospace';
+  
+      for(let i = 0; i < rainDrops.length; i++)
+      
+      {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+          context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+  
+          if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+              rainDrops[i] = 0;
+          }
+          rainDrops[i]++;
+      }
+    };
+  
+    setInterval(draw, 30);
+  }, [])
+  
   return (
     <>
       <Head>
@@ -78,26 +122,30 @@ export default function Portfolio(props) {
       </Head>
       <main className='no-mrg'>
       <Metatags title="calvin.art" description="calvin's portfolio" image={"https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp.png?alt=media&token=3ab0bc98-b607-400b-bcbe-2b4fb633734d"} />
-        <div className='home-page f f-col gap'>
-          <div className='div2 pad rounded f f-col gap '>
-          <div className='f f-start2 gap'>
-                <Image ref={pfpRef} id="pfp" className='pfp rounded' height="120" width="120" alt="pic of me" src={pfp}/>
-                <div id="blurb" className='f f-col rounded div1 pad'>
+        <div className='home-page f col gap'>
+          <div className='div pad rounded f col gap'>
+          <div className='f justify-start gap '>
+                <div className='below rounded' style={{ height: '100px', width: '100px' }}>
+                  <canvas id="matrix-canvas" style={{ height: '100px', width: '100px' }} className='matrix-canvas rounded right-on-top' />
+                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'multiply', height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"/../public/matrix_pfp_cutout.png"}/>
+                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'screen', opacity: "70%", height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"/../public/matrix_pfp_cutout.png"}/>
+                </div>
+                <div id="blurb" className='f col rounded div-2nd pad shrink'>
                   <Link href={'/'} className='clickable'><h1 className='no-mrg'>{title}</h1></Link>
                   <p className='no-mrg'>{bio}</p>
                 </div>
               {editing && (
-                <div className='f f-col grow'>
+                <div className='f col grow'>
                   <input className="no-mrg" type="text" value={title} onChange={e => setTitle(e.target.value)} />
                   <textarea className='grow' type="text" value={bio} onChange={e => setBio(e.target.value)} />
                 </div>
                 )}
           </div>
           <div className='f f-start2 gap wrap div2'>
-            <SocialIcon app="twitter"/>
-            <SocialIcon app="email" />
-            <SocialIcon app="github" />
-            <p className='align-bottom code no-mrg'>python, javascript, html, css </p>
+            <Link href="mailto:calvinducharme@gmail.com"><SvgIcon icon='email' width='32'/></Link>
+            <Link href="https://github.com/calvinusesyourcode"><SvgIcon icon='github' width='32'/></Link>
+            <Link href="https://twitter.com/calvinducharme"><SvgIcon icon='twitter' width='32'/></Link>
+            <p className='align-bottom monospace no-mrg'>python, javascript, html, css </p>
             </div>
             <AuthCheck fallback={<></>}>
               <div className='f f-start2 gap'>
@@ -106,10 +154,9 @@ export default function Portfolio(props) {
               </div>
             </AuthCheck>
             </div>
-            <div className='f f-col gap'>
-
-            <ProjectOverview project="peden" color="#ffd600" styles={styles}/>
-            <ProjectOverview project="glyptodon" color="url(#sunset_gradient)" styles={styles}/>
+            <div className='f col gap' style={{display: 'none'}}>
+              <ProjectOverview project="peden" color="#ffd600" styles={styles}/>
+              <ProjectOverview project="glyptodon" color="url(#sunset_gradient)" styles={styles}/>
             </div>
 
 

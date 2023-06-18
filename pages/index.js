@@ -96,7 +96,7 @@ export default function JapaneseMatrix() {
       <main className='no-mrg'>
         <Metatags title="calvin's virtual portal" description="calvin ducharme's website" image="https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp.png?alt=media&token=3ab0bc98-b607-400b-bcbe-2b4fb633734d" />
         <canvas className='below' id="matrix-canvas"></canvas>
-        <Link className='above' href="/portfolio"><h1 className='link'>portfolio</h1></Link>
+        <Link className='above-middle' href="/portfolio"><h1 className='link'>portfolio</h1></Link>
 
       </main>
     </>

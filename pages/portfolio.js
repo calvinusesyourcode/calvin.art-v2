@@ -130,8 +130,8 @@ export default function Portfolio(props) {
           <div className='f justify-start gap '>
                 <div className='below rounded' style={{ height: '100px', width: '100px' }}>
                   <canvas id="matrix-canvas" style={{ height: '100px', width: '100px' }} className='matrix-canvas rounded right-on-top' />
-                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'multiply', height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"/../public/matrix_pfp_cutout.png"}/>
-                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'screen', opacity: "70%", height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"/../public/matrix_pfp_cutout.png"}/>
+                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'multiply', height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp_cutout.png?alt=media&token=2aabe716-2104-4a3d-949a-6510461bfc59"}/>
+                  <Image ref={pfpRef} id="pfp" style={{ mixBlendMode: 'screen', opacity: "70%", height: '100px', width: '100px' }} className='rounded right-on-top' height="300" width="300" alt="pic of me" src={"https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp_cutout.png?alt=media&token=2aabe716-2104-4a3d-949a-6510461bfc59"}/>
                 </div>
                 <div id="blurb" className='f col rounded div-2nd pad shrink'>
                   <Link href={'/'} className='clickable'><h1 className='no-mrg'>{title}</h1></Link>

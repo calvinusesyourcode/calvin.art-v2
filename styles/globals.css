@@ -844,3 +844,7 @@ li {
 .t-center {
   text-align: center;
 }
+
+svg text {
+  user-select: none;
+}

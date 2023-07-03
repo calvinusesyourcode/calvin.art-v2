@@ -113,8 +113,11 @@ export default function Portfolio(props) {
     };
   
     setInterval(draw, 30);
+    
+
   }, [])
-  
+
+
   return (
     <>
       <Head>
@@ -154,9 +157,14 @@ export default function Portfolio(props) {
               </div>
             </AuthCheck>
             </div>
-            <div className='f col gap' style={{display: 'none'}}>
-              <ProjectOverview project="peden" color="#ffd600" styles={styles}/>
-              <ProjectOverview project="glyptodon" color="url(#sunset_gradient)" styles={styles}/>
+            {/* <audio id="mysterious" controls muted autoplay loop>
+              <source src="mario-paint_mysterious.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio> */}
+
+            <div className='f col gap'>
+              <ProjectOverview project="peden" color="#ffd600"/>
+              <ProjectOverview project="glyptodon" color="url(#sunset_gradient)"/>
             </div>
 
 

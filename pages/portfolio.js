@@ -147,7 +147,7 @@ export default function Portfolio(props) {
           <div className='f f-start2 gap wrap div2'>
             <Link href="mailto:calvinducharme@gmail.com"><SvgIcon icon='email' width='32'/></Link>
             <Link href="https://github.com/calvinusesyourcode"><SvgIcon icon='github' width='32'/></Link>
-            <Link href="https://twitter.com/calvinducharme"><SvgIcon icon='twitter' width='32'/></Link>
+            {/* <Link href="https://twitter.com/calvinducharme"><SvgIcon icon='twitter' width='32'/></Link> */}
             <p className='align-bottom monospace no-mrg'>python, javascript, html, css </p>
             </div>
             <AuthCheck fallback={<></>}>

@@ -290,12 +290,6 @@ code {
   z-index: 99;
 }
 
-#logo {
-  max-width: 1rem;
-}
-#logo-svg {
-  max-width: 24rem;
-}
 .navbar ul {
   list-style-type: none;
   margin: 0;

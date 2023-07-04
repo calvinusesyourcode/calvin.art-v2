@@ -33,27 +33,27 @@ export function ProjectOverview(props) {
     return (
         <>
         <div id={project+"_div"} className={"mrg-left div2 pad rounded bottom"}>
-        <div id={project+"_button"} width="440" className="clickable f f-start2 f-center gap w100" onClick={() => {
+        <div id={project+"_button"} width="360" className="clickable f justify-start align-start gap no-wrap" onClick={() => {
             document.getElementById(project+"_dropdown").classList.toggle("show"); show = true
             setColor(color == "white" ? props.color : "white")
             setDropdown(!dropdown)
             }}>
                 {dropdown ?
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 293 242"><polyline fill={color} points="293 0 0 0 147 242"/></svg>
+                <svg style={{minWidth: "20"}} xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 293 242"><polyline fill={color} points="293 0 0 0 147 242"/></svg>
                 :
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 242 293"><polyline fill={color} points="0 0 0 293 242 146"/></svg>
+                <svg style={{minWidth: "20"}} xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 242 293"><polyline fill={color} points="0 0 0 293 242 146"/></svg>
                 }
                 {project == "peden" &&
-                <div className="center" style={{fontFamily: "Helvetica"}}>
-                    <svg className="w100 center" id={project+"_svg"} height="50" xmlns="http://www.w3.org/2000/svg" viewBox="40 50 807.34 96">
+                <div style={{fontFamily: "Helvetica"}}>
+                    <svg id={project+"_svg"} height="50" xmlns="http://www.w3.org/2000/svg" viewBox="40 50 807.34 96">
                         <path id={project+"_path"} transform='translate(60 40) scale(.61 .6)' fill={color} d="M72,38c233,.33,275-.33,508,0a8.42,8.42,0,0,1,7-6,8.26,8.26,0,0,1,6,2l98-13,2,1,32-4,7-8h14l11,8,8,3,35,25,1,3,20,14a4.44,4.44,0,0,1,4,0c1.68,1.06,2.32,3.72,1,6l4,13a5,5,0,0,1,4,3,5.12,5.12,0,0,1-2,6c.7.72,8,8.42,6,19a21.86,21.86,0,0,1-17,17l-37,1v-3a39,39,0,0,0,11-5c13.37-8.85,17-23.49,18-28L755,53c-291.33.33-391.67,1.67-683,2A26.6,26.6,0,0,0,49,76v42a23.23,23.23,0,0,0,7,16,22.74,22.74,0,0,0,13,6c316.33,0,441.67-1,758-1l-12,18c-313,0-435,1-748,1a41.29,41.29,0,0,1-36-40V76A41.11,41.11,0,0,1,72,38Zm666-1-5-7V27l-6-6-34,4-1,1L615,38Zm77,32,2-4L765,27l39,43,5-4Zm7,11c1.31-1.06,1.26-4,0-7l-9,3C816.22,80.23,820.41,81.28,822,80Z"/>  
-                        <text className="logo-text" fill="white" transform={`translate(100 114) scale(.5 .5)`}>PEDEN INDUSTRIES</text>
+                        <text style={{fontSize: "82px", height: "100%", width: "100%"}} fill="white" transform={`translate(100 114) scale(.5 .5)`}>PEDEN INDUSTRIES</text>
                     </svg>
                 </div>
                 }
                 {project == "glyptodon" &&
-                <div className="center">
-                <svg className="w100 center" id={project+"_svg"} height="50" xmlns="http://www.w3.org/2000/svg" viewBox="8 8 500 100">
+                <div>
+                <svg id={project+"_svg"} height="50" xmlns="http://www.w3.org/2000/svg" viewBox="8 8 500 100">
                     <defs>
                         <linearGradient id="sunset_gradient" x1="253.75" y1="7.71" x2="253.75" y2="129.66" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#f6be74"/>

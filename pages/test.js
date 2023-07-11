@@ -17,15 +17,10 @@ export default function GifASCII(props) {
   const canvasRef = useRef(null);
   const { gif } = props;
 
-  console.log(gif[0][0].length)
+  console.log("y length", gif[0].length)
 
   useEffect(() => {
-    for (let i = 0; i < gif.length; i++) {
-      for (let j = 0; j < gif[i].length; j++) {
-        gif[i][j] = gif[i][j].concat(gif[i][j])
-      }
-    }
-    console.log(gif[0][0].length)
+    
 
 
   
@@ -33,16 +28,24 @@ export default function GifASCII(props) {
     
     
     const draw = async () => {
+      const fontSize = 10;
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
-      
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       
+      while (gif[0][0].length < canvas.width/fontSize) {
+        for (let frame = 0; frame < gif.length; frame++) {
+          for (let y = 0; y < gif[frame].length; y++) {
+            gif[frame][y] = gif[frame][y].concat(gif[frame][y])
+          }
+        }
+      }
+      
+      
       const alphabet = '01'
       
-      const columns = gif[0][0].length;
-      let fontSize = 10;
+
       context.fillStyle = 'rgba(0, 0, 0, 1)';
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.font = fontSize + 'px monospace';
@@ -50,7 +53,6 @@ export default function GifASCII(props) {
       const renderFrame = (frame) => {
         context.fillStyle = 'rgba(0, 0, 0, 1)';
         context.fillRect(0, 0, canvas.width, canvas.height);
-        context.font = fontSize + 'px monospace';
         for (let y = 0; y < gif[frame].length; y++) {
           for (let x = 0; x < gif[frame][0].length; x++) {
             const rgb = gif[frame][y][x];

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useContext } from 'react';
+import { UserContext } from '../lib/context';
 
 /**
  * Returns an SVG Icon.
@@ -95,3 +97,44 @@ export function SvgIcon(props) {
             )}
         </>
     )};
+
+/**
+ * Returns content based on user permissions.
+ *
+ * @param {JSX} props.children - Content rendered if user has permission.
+ * @param {JSX} props.fallback - Else.
+ */ 
+export function AuthCheck(props) {
+    const { role, fetchingUser } = useContext(UserContext);
+
+    return (
+        <>
+            {!fetchingUser && (
+                role == "admin" || role == "noob" ? props.children : props.fallback
+            )}
+            {fetchingUser && (
+                <button className="non-button">loading...</button>
+            )}
+        </>
+    )
+}
+
+/**
+ * Wait until user fetched.
+ *
+ * @param {JSX} props.children - Content rendered after user information retrieved.
+ */ 
+export function AfterUserFetched(props) {
+    const { fetchingUser } = useContext(UserContext);
+
+    return (
+        <>
+            {!fetchingUser && (
+                props.children
+            )}
+            {fetchingUser && (
+                <button className="non-button">loading...</button>
+            )}
+        </>
+    )
+}

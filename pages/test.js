@@ -1,31 +1,83 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import fs from 'fs';
 
-const pfp = "https://firebasestorage.googleapis.com/v0/b/calvin-art.appspot.com/o/public%2Fmatrix_pfp.png?alt=media&token=3ab0bc98-b607-400b-bcbe-2b4fb633734d"
+export const getStaticProps = async () => {
+  try {
+    const data = await fs.promises.readFile('./public/fire_gif.json', 'utf8');
+    console.log("done");
+    return { props: { gif: JSON.parse(data) } };
+  } catch(err) {
+      console.error('Caught:', err);
+  }
+}
 
-export default function Portfolio(props) {
+export default function GifASCII(props) {
+  const canvasRef = useRef(null);
+  const { gif } = props;
 
-  // Other code...
-
-  const pfpRef = useRef(); // Create a ref
-  const divRef = useRef(); // Create a ref
+  console.log(gif[0][0].length)
 
   useEffect(() => {
-    if (pfpRef.current) {
-      pfpRef.current.style.height = '100%'; // Set the height
+    for (let i = 0; i < gif.length; i++) {
+      for (let j = 0; j < gif[i].length; j++) {
+        gif[i][j] = gif[i][j].concat(gif[i][j])
+      }
     }
-    if (divRef.current) {
-      console.log("div",divRef.current.style.height)
-    }
-  }, []);
+    console.log(gif[0][0].length)
 
-  return (
-    <>
-    <div className='f f-start2 gap'>
-        <Image ref={pfpRef} id="pfp" className='pfp rounded' height="100" width="100" alt="pic of me" src={pfp}/>
-      <div ref={divRef} className='pad div2'>hi</div>
-    </div>
-      </>
+
+  
+
+    
+    
+    const draw = async () => {
+      const canvas = canvasRef.current;
+      const context = canvas.getContext('2d');
+      
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      
+      const alphabet = '01'
+      
+      const columns = gif[0][0].length;
+      let fontSize = 10;
+      context.fillStyle = 'rgba(0, 0, 0, 1)';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.font = fontSize + 'px monospace';
+      
+      const renderFrame = (frame) => {
+        context.fillStyle = 'rgba(0, 0, 0, 1)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.font = fontSize + 'px monospace';
+        for (let y = 0; y < gif[frame].length; y++) {
+          for (let x = 0; x < gif[frame][0].length; x++) {
+            const rgb = gif[frame][y][x];
+            const text = "`.-':_,^=;><+!rc*/z?sLTv)J7(|Fi{C}fI31tlu[neoZ5Yxjya]2ESwqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&@"[Math.round((rgb[0] + rgb[1] + rgb[2])/765*91)]
+            context.fillStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 1)`;
+            context.fillText(text, x*fontSize, y*fontSize);
+          }
+        }
+        frame = frame > 1000 ? -1 : frame
+        setTimeout(() => {
+          renderFrame((frame+1)%gif.length)
+        }, 100)
+        
+      }
+      renderFrame(0)
+    }
+
+    setTimeout(() => {
+      draw()
+    }, 500)
+  }, [])
+
+return (
+  <>
+      <div>
+        <canvas ref={canvasRef} width="100px" height="100px"/>
+      </div>
+    </>
   );
 }

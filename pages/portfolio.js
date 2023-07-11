@@ -10,7 +10,6 @@ import { firestore, postToJSON, fromMillis, serverTimestamp, storage } from '@/l
 import AuthCheck from '@/components/AuthCheck'
 import path from 'path'
 import Metatags from '@/components/Metatags'
-import styles from '@/styles/Home.module.css'
 
 export async function getServerSideProps(context) {
   const postsQuery = firestore

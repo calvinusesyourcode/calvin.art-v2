@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import fs from 'fs';
+import fs from 'fs'
 
 export const getStaticProps = async () => {
   try {
@@ -33,7 +33,7 @@ export default function GifASCII(props) {
       const context = canvas.getContext('2d');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      
+
       while (gif[0][0].length < canvas.width/fontSize) {
         for (let frame = 0; frame < gif.length; frame++) {
           for (let y = 0; y < gif[frame].length; y++) {
@@ -49,6 +49,7 @@ export default function GifASCII(props) {
       context.fillStyle = 'rgba(0, 0, 0, 1)';
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.font = fontSize + 'px monospace';
+      const yDelta = canvas.height - gif[0].length*fontSize
       
       const renderFrame = (frame) => {
         context.fillStyle = 'rgba(0, 0, 0, 1)';
@@ -58,7 +59,7 @@ export default function GifASCII(props) {
             const rgb = gif[frame][y][x];
             const text = "`.-':_,^=;><+!rc*/z?sLTv)J7(|Fi{C}fI31tlu[neoZ5Yxjya]2ESwqkP6h9d4VpOGbUAKXHm8RD#$Bg0MNWQ%&@"[Math.round((rgb[0] + rgb[1] + rgb[2])/765*91)]
             context.fillStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 1)`;
-            context.fillText(text, x*fontSize, y*fontSize);
+            context.fillText(text, x*fontSize, y*fontSize+yDelta+4);
           }
         }
         frame = frame > 1000 ? -1 : frame
@@ -78,6 +79,13 @@ export default function GifASCII(props) {
 return (
   <>
       <div>
+        <style>
+          {`html {
+              background-color: #000000;
+              overflow: hidden;
+            }
+            `}
+        </style>
         <canvas ref={canvasRef} width="100px" height="100px"/>
       </div>
     </>

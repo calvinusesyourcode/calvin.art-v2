@@ -2,14 +2,13 @@ import Metatags from "@/components/Metatags"
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import styles from "@/styles/Home.module.css"
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
 import { useEffect } from "react"
 
 export default function DennisPage(props) {
     const create_p = (array) => {
         return array.map((text, i) => (
-            <p className={styles.p} key={i}>{text}</p>
+            <p key={i}>{text}</p>
         ))}
     
     useEffect(() => {

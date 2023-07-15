@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'fs'
+import styles from "../styles/FireAnimation.module.css";
 
 export const getStaticProps = async () => {
   try {
@@ -20,13 +21,6 @@ export default function GifASCII(props) {
   console.log("y length", gif[0].length)
 
   useEffect(() => {
-    
-
-
-  
-
-    
-    
     const draw = async () => {
       const fontSize = 10;
       const canvas = canvasRef.current;
@@ -62,10 +56,10 @@ export default function GifASCII(props) {
             context.fillText(text, x*fontSize, y*fontSize+yDelta+4);
           }
         }
-        frame = frame > 1000 ? -1 : frame
+        // frame = frame > 1000 ? -1 : frame
         setTimeout(() => {
           renderFrame((frame+1)%gif.length)
-        }, 100)
+        }, 1000/12)
         
       }
       renderFrame(0)
@@ -78,14 +72,10 @@ export default function GifASCII(props) {
 
 return (
   <>
+      <style>
+        {`html { background-color: #000000; overflow: hidden; }`}
+      </style>
       <div>
-        <style>
-          {`html {
-              background-color: #000000;
-              overflow: hidden;
-            }
-            `}
-        </style>
         <canvas ref={canvasRef} width="100px" height="100px"/>
       </div>
     </>

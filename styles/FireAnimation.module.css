@@ -1,0 +1,7 @@
+canvas.reveal ::before {
+    animation: reveal 1s ease-in-out forwards;
+}
+
+canvas.reveal ::after {
+    animation: reveal 1s ease-in-out forwards;
+}
